@@ -1,0 +1,184 @@
+/*-----------------------------------*\
+  #media_queries.css
+\*-----------------------------------*/
+
+/**
+ *  praveen project
+ */
+
+
+@media (min-width: 992px) {
+
+  /**
+   * #VARIABLE 
+   */
+
+  :root {
+
+    --fs-5: 16px;
+    
+    --px: 30px;
+    --py: 120px;
+
+  }
+
+  /**
+   * #HEADER 
+   */
+
+  .navbar { padding: 20px var(--px); }
+
+  .navbar-nav {
+    background: transparent;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+    display:     flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-item:not(:last-child) a { border-bottom: none; }
+
+  .nav-toggle-btn { display: none; }
+
+  .navbar .btn { display: block; }
+
+  /**
+   * #HOME 
+   */
+
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .home::before {
+    top:  -100px;
+    left: -300px;
+  }
+
+  .home::after { top: 0; }
+
+  .home-left { margin-bottom: 0; }
+
+  .home .section-subtitle,
+  .main-heading,
+  .home .section-text { text-align: left; }
+
+  .home .section-text { margin: 0 0 30px; }
+
+  .home-btn-group { justify-content: start; }
+
+  /**
+   * #ABOUT 
+   */
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 40px;
+  }
+
+  .about-left { margin-left: -70px; }
+
+  .about-left img { max-width: unset; }
+
+  .about-right { padding-top: 0; }
+
+  /**
+   * #COURSE 
+   */
+
+  .course { position: relative; }
+
+  .course .section-subtitle,
+  .course .section-title { max-width: 600px; }
+
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
+  }
+
+  .course .btn-primary {
+    position: absolute;
+    top: 130px;
+    right: var(--px);
+  }
+
+  /**
+   * #FEATURES 
+   */
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .features-right { height: auto; }
+
+  /**
+   * #CONTACT 
+   */
+
+  .contact-card { grid-template-columns: 1fr 1fr; }
+
+  .contact-card h2 { text-align: left; }
+
+  .contact .btn-primary {
+    justify-self: end;
+    align-self: center;
+  }
+
+  /**
+   * #FOOTER 
+   */
+
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 2fr; }
+
+}
+
+
+
+
+  /**
+   * #VARIABLE 
+   */
+
+  :root {
+
+    --fs-1: 70px;
+    --fs-2: 55px;
+    --fs-3: 40px;
+    --fs-4: 25px;
+    --fs-7: 22px;
+
+    --px: 120px;
+
+  }
+
+  /**
+   * #HOME 
+   */
+
+  .home-left { padding-bottom: var(--py); }
+
+  .home .section-text { font-size: 18px; }
+
+  /**
+   * #CATEGORY 
+   */
+
+  .category .course-item-group { grid-template-columns: repeat(3, 1fr); }
+
+  /**
+   * #CONTACT 
+   */
+
+  .contact-card h2 { font-size: 45px; }
+
